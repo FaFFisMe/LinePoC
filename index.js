@@ -19,6 +19,8 @@ app.post('/webhook', line.middleware(config), (req,res) => {
         .then((result) => res.json(result))
 })
 
+const client = new line.Client(config);
+
 function handleEvents(event){
 
     console.log(event);
